@@ -10,11 +10,19 @@ public class App {
     
 	public static void main(String[] args) {
 
+        // Convert Enriched TSV String using Scala Analytics SDK
         Validated<ParsingError, Event> validatedEvent = Event.parse(record);
+
+        // Check if String has been parsed correctly
         if (validatedEvent.isValid()) {
+
+            // Get Event object 
             Event ev = validatedEvent.toOption().get();
+
+            // Convert to JSON String if desired
             String jsonString = ev.toJson(false).toString(); // Or true if you want lossy output
 
+            // Get individual properties of the event
             System.out.println(ev.platform().get());
             System.out.println(ev.collector_tstamp().getEpochSecond());
             System.out.println(ev.event().get());
