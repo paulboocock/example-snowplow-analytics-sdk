@@ -1,4 +1,4 @@
-package net.paulboocock.core;
+package com.snowplowanalytics;
 
 import cats.data.Validated;
 import com.snowplowanalytics.snowplow.analytics.scalasdk.Event;
