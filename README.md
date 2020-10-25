@@ -10,7 +10,6 @@ Run with:
 
 ```
 java -jar target/snowplow-scala-analytics-sdk-java-example.jar
-
 ```
 
 See included dependencies:
